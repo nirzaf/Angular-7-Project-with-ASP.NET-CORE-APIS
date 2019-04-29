@@ -36,7 +36,7 @@ namespace WebGYM.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var loginstatus = _users.AuthenticateUsers(value.UserName, EncryptionLibrary.EncryptText(value.Password));
+                    var loginstatus = _users.AuthenticateUsers(value.UserName, value.Password);
 
                     if (loginstatus)
                     {
